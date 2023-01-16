@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Todo list</title>
 </head>
 <body>
-    <header>
-        <h1>To-do list</h1>
-    </header>
-    <main>
-        <div class="list-div">
-            <ul class="todo-list"></ul>
-        </div>
-    </main>
+    <div class="container">
+        <header>
+            <h1>To-do list</h1>
+        </header>
+        <main>
+            <form action="">
+                <label for="todo">Task</label>
+                <input type="text" name="todo" id="todo">
+            </form>
+            <div class="list-div">
+                <ul class="todo-list">
+                    <li class="todo-list-item">
+                        <div>First item</div>
+                        <div>
+                            <button>
+                                &#128473;
+                            </button>
+                        </div>
+                    </li>
+                    <li class="todo-list-item">
+                        <div>First item</div>
+                        <div>
+                            <button>
+                                &#128473;
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
