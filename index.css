@@ -81,7 +81,7 @@ input{
     margin-bottom: 0.5rem;
 }
 
-button{
+#btn{
     display: flex;
     justify-content: center;
     line-height: 30px;
