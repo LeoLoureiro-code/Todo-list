@@ -81,20 +81,10 @@ input{
     margin-bottom: 0.5rem;
 }
 
-#btn{
-    display: flex;
-    justify-content: center;
-    line-height: 30px;
-    height: 30px;
-    width: 30px;
-    background-color: #F4F4F4;
-    border: none;
-    border-radius: 20px;
-    transition: all 1s ease-in-out;
+.todo-list-item:hover{
+    cursor: pointer;
 }
 
-button:hover{
-    background-color: #6D7993;
-    color: #F4F4F4;
-    cursor: pointer;
+.complete{
+    text-decoration: line-through;
 }
