@@ -1,0 +1,29 @@
+:root{
+    --font-family: "Josefin Sans", sans-serif;
+}
+
+.theme1{
+    --color-background: #FFFFFF;
+    --color-text: #494C6B;
+    --color-background-input: #FFFFFF;
+    --color-border-input: #D1D2DA;
+    --color-text-complete: #9495A5;
+    --color-options: #5B5E7E;
+    --color-options-hover: #C8CBE7;
+    --color-options-selected: #3A7CFD;
+    --color-gradient1: #55DDFF;
+    --color-gradient2: #C058F3;
+}
+
+.theme2{
+    --color-background: #171823;
+    --color-text: #E3E4F1;
+    --color-background-input: #25273D;
+    --color-border-input: #393A4B;
+    --color-text-complete: #4D5067;
+    --color-options: #5B5E7E;
+    --color-options-selected: #3A7CFD;
+    --color-options-hover: #494C6B;
+    --color-gradient1: #3710BD;
+    --color-gradient2: #A42395;
+}
