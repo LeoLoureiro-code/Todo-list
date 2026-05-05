@@ -46,6 +46,8 @@ body{
     padding: 2rem 1.5rem 3rem 1.5rem;
     background-image: url(images/bg-mobile-light.jpg);
     background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
 }
 
 header{
@@ -61,4 +63,64 @@ header{
     font-size: clamp(1.4rem, 2vw, 2rem);
     font-weight: 700;
     letter-spacing: 0.5rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+form{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+input{
+    border: none;
+    border-radius: 5px;
+    height: 48px;
+    outline: none;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.todos_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todos_list{
+    list-style: none;
+    width: 100%;
+}
+
+.todos_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #C8CBE7;
+    border-radius: 5px;
+    background-color: var(--color-background-input);
+    height: 50px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.todos_content{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.todos_complete{
+    border: 1px solid #C8CBE7;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
 }
