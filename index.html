@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <title>Todo app</title>
 </head>
-<body class="theme1">
+<body class="light">
   <div class="container">
   <header> 
     <p class="logo">TODO</p>
@@ -19,7 +19,7 @@
     </div> 
   </header> 
   <main> 
-    <form action="">
+    <form action="#">
       <input type="text" placeholder="Create a new todo...">
     </form>
     <div class="todos_container">
@@ -27,7 +27,7 @@
         <li class="todos_item">
           <div class="todos_content">
           <div class="todos_complete">
-            <img src="images/icon-check.svg" alt="check icon">
+            <img src="images/icon-check.svg" alt="check icon" class="check_icon">
           </div>
               <p class="todos_paragraph">Jog around the park 3x</p>
           </div>
@@ -36,7 +36,7 @@
         <li class="todos_item">
           <div class="todos_content">
             <div class="todos_complete">
-              <img src="images/icon-check.svg" alt="check icon">
+              <img src="images/icon-check.svg" alt="check icon" class="check_icon">
             </div>
             <p class="todos_paragraph">10 minutes meditation</p>
           </div>
@@ -44,7 +44,20 @@
         </li>
       </ul>
     </div>
+    <div class="options">
+      <span class="items_left">5 items left</span>
+      <button class="clear_complete">Clear Completed</button>
+    </div>
+    <div class="filter_div">
+      <button class="filter_button">All</button>
+      <button class="filter_button">Active</button>
+      <button class="filter_button">Completed</button>
+    </div>
   </main>
+  <footer>
+    <p class="drag_drop_paragraph">Drag and drop to reorder list</p>
+  </footer>
   </div>
+  <script src="./scripts.js" defer></script>
 </body>
 </html>
