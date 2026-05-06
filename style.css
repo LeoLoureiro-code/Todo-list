@@ -2,7 +2,7 @@
     --font-family: "Josefin Sans", sans-serif;
 }
 
-.theme1{
+.light{
     --color-background: #FFFFFF;
     --color-text: #494C6B;
     --color-background-input: #FFFFFF;
@@ -13,9 +13,11 @@
     --color-options-selected: #3A7CFD;
     --color-gradient1: #55DDFF;
     --color-gradient2: #C058F3;
+    --background-image-mobile: url("images/bg-mobile-light.jpg");
+    --background-image-desktop: url("images/bg-desktop-light.jpg");
 }
 
-.theme2{
+.dark{
     --color-background: #171823;
     --color-text: #E3E4F1;
     --color-background-input: #25273D;
@@ -26,6 +28,8 @@
     --color-options-hover: #494C6B;
     --color-gradient1: #3710BD;
     --color-gradient2: #A42395;
+    --background-image-mobile: url("images/bg-mobile-dark.jpg");
+    --background-image-desktop: url("images/bg-desktop-dark.jpg");
 }
 
 *{
@@ -36,6 +40,7 @@
 
 body{
     font-family: var(--font-family);
+    background-color: var(--color-background);
 }
 
 .container{
@@ -44,7 +49,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 2rem 1.5rem 3rem 1.5rem;
-    background-image: url(images/bg-mobile-light.jpg);
+    background-image: var(--background-image-mobile);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: contain;
@@ -79,6 +84,7 @@ form{
 }
 
 input{
+    background-color: var(--color-background-input);
     border: none;
     border-radius: 5px;
     height: 48px;
@@ -118,9 +124,50 @@ input{
     gap: 1rem;
 }
 
+.check_icon{
+
+}
+
+.todos_paragraph{
+    color: var(--color-text);
+}
+
 .todos_complete{
     border: 1px solid #C8CBE7;
     border-radius: 50%;
     height: 1.5rem;
     width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.check_icon{
+    display: none;
+}
+
+.todos_complete_active{
+    border-image: linear-gradient(var(--color-gradient1), var(--color-gradient2));
+}
+
+.options{
+    background-color: var(--color-background-input);
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.items_left{
+    color: var(--color-text);
+}
+
+.clear_complete{
+    background-color: transparent;
+    border: none;
+    color: var(--color-text);
+    font-weight: 600;
 }
