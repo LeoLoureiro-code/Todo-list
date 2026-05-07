@@ -53,6 +53,8 @@ body{
     background-repeat: no-repeat;
     background-position: center top;
     background-size: contain;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 header{
@@ -61,6 +63,7 @@ header{
     align-items: center;
     width: 100%;
     margin-bottom: 3rem;
+    max-width: 33.75rem;
 }
 
 .logo{
@@ -76,6 +79,7 @@ main{
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 33.75rem;
 }
 
 form{
@@ -132,6 +136,10 @@ input{
     color: var(--color-text);
 }
 
+.todos_eliminate{
+    cursor: pointer;
+}
+
 .todos_complete{
     border: 1px solid #C8CBE7;
     border-radius: 50%;
@@ -159,15 +167,47 @@ input{
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .items_left{
-    color: var(--color-text);
+    color: var(--color-text-complete);
 }
 
 .clear_complete{
     background-color: transparent;
     border: none;
-    color: var(--color-text);
+    color: var(--color-text-complete);
     font-weight: 600;
+    cursor: pointer;
+}
+
+.filter_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.filter_button{
+    background-color: transparent;
+    border: none;
+    color: var(--color-text-complete);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filter_button_selected{
+    background-color: transparent;
+    border: none;
+    color: var(--color-options-selected);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
 }
