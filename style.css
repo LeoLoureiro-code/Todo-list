@@ -41,6 +41,7 @@
 body{
     font-family: var(--font-family);
     background-color: var(--color-background);
+    padding-bottom: 4rem;
 }
 
 .container{
@@ -117,7 +118,7 @@ input{
     border-bottom: 1px solid #C8CBE7;
     border-radius: 5px;
     background-color: var(--color-background-input);
-    height: 50px;
+    min-height: 50px;
     padding: 1rem;
     width: 100%;
 }
@@ -125,15 +126,20 @@ input{
 .todos_content{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
     gap: 1rem;
 }
 
 .check_icon{
-
+    display: none;
 }
 
 .todos_paragraph{
     color: var(--color-text);
+    line-height: 1.5rem;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .todos_eliminate{
@@ -143,8 +149,8 @@ input{
 .todos_complete{
     border: 1px solid #C8CBE7;
     border-radius: 50%;
-    height: 1.5rem;
-    width: 1.5rem;
+    min-height: 1.5rem !important;
+    min-width: 1.5rem !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,7 +213,11 @@ input{
     cursor: pointer;
 }
 
-.footer{
-    position: fixed;
-    bottom: 0;
+footer{
+    margin-top: 3rem;
+    bottom: 5%;
+}
+
+.drag_drop_paragraph{
+    color: var(--color-text-complete);
 }
