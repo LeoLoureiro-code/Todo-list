@@ -74,6 +74,10 @@ header{
     letter-spacing: 0.5rem;
 }
 
+.theme-div:hover{
+    cursor: pointer;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -96,6 +100,10 @@ input{
     outline: none;
     padding: 0 1rem;
     width: 100%;
+}
+
+.input_error{
+    border: 2px solid #db0909;
 }
 
 .todos_container{
@@ -131,6 +139,7 @@ input{
     gap: 1rem;
 }
 
+
 .check_icon{
     display: none;
 }
@@ -154,8 +163,18 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
+.todos_complete:hover{
+    cursor: pointer;
+}
+
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
 
 .check_icon{
     display: none;
@@ -187,6 +206,11 @@ input{
     color: var(--color-text-complete);
     font-weight: 600;
     cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.clear_complete:hover{
+    color: var(--color-options-selected);
 }
 
 .filter_div{
