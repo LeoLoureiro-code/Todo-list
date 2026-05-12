@@ -3,10 +3,17 @@ const THEMES = {
     dark: "dark",
 };
 
+const FILTERS = {
+    ALL: "all",
+    ACTIVE: "active",
+    COMPLETED: "completed",
+};
+
 const STATE = {
     Theme: THEMES.light,
     InputValue: "",
     Todos: [],
+    filter: FILTERS.ALL,
     error: false
 };
 
@@ -37,6 +44,7 @@ function CreateTodo(todoContent) {
 
     Render();
 }
+
 
 function DeleteCompleteTodos(){
 
@@ -70,6 +78,21 @@ function RenderError() {
         formInput.placeholder = "Create a new todo...";
         formInput.classList.remove("input_error");
     }
+}
+
+function RenderFilters() {
+
+    const buttons = document.querySelectorAll('.filter_button');
+
+    buttons.forEach(button => {
+
+        if (button.dataset.filter === STATE.filter) {
+            button.className = "filter_button_selected";
+        } else {
+            button.className = "filter_button";
+        }
+
+    });
 }
 
 function RenderTodos() {
@@ -164,6 +187,7 @@ function RenderTodos() {
 function Render() {
     RenderTodos();
     RenderError();
+    RenderFilters();
 }
 
 themeIcon.addEventListener("click", function (event) {
@@ -182,6 +206,17 @@ form.addEventListener("submit", function (event) {
     CreateTodo(todoInput.value);
 
     todoInput.value = "";
+});
+
+document.querySelectorAll('.filter_button').forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        STATE.filter = button.dataset.filter;
+
+        Render();
+    });
+
 });
 
 completeButton.addEventListener("click", function(){
