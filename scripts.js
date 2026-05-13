@@ -86,10 +86,10 @@ function RenderFilters() {
 
     buttons.forEach(button => {
 
+        button.classList.remove("filter_button_selected");
+
         if (button.dataset.filter === STATE.filter) {
-            button.className = "filter_button_selected";
-        } else {
-            button.className = "filter_button";
+            button.classList.add("filter_button_selected");
         }
 
     });
