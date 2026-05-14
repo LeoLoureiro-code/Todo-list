@@ -101,7 +101,20 @@ function RenderTodos() {
 
     todoList.innerHTML = "";
 
-    STATE.Todos.forEach(todo => {
+    let filteredTodos = STATE.Todos;
+
+    if (STATE.filter === FILTERS.ACTIVE) {
+
+        filteredTodos = STATE.Todos.filter(todo => !todo.completed);
+
+    }
+    else if (STATE.filter === FILTERS.COMPLETED) {
+
+        filteredTodos = STATE.Todos.filter(todo => todo.completed);
+
+    }
+
+    filteredTodos.forEach(todo => {
 
         const todoItem = document.createElement('li');
         todoItem.className = "todos_item";
