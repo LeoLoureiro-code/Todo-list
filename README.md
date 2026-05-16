@@ -20,8 +20,8 @@ Users should be able to:
 
 ### Screenshot
 
-![App Screenshot](./images/screenshots/todo_desktop.png)
-![App Screenshot](./images/screenshots/todo_mobile.png)
+![App Screenshot](images/screenshots/todo_desktop.png)
+![App Screenshot](images/screenshots/todo_mobile.png)
 
 ---
 
