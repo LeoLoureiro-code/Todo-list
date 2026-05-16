@@ -200,12 +200,6 @@ function RenderTodos() {
         const completeDiv = document.createElement('div');
         completeDiv.className = "todos_complete";
 
-        const completeImg = document.createElement('img');
-        completeImg.className = "check_icon";
-        completeImg.src = "images/icon-check.svg";
-
-        completeDiv.appendChild(completeImg);
-
         completeDiv.addEventListener("click", () => {
 
             todo.completed = !todo.completed;
@@ -221,6 +215,18 @@ function RenderTodos() {
 
             todoContent.classList.add("completed");
             completeDiv.classList.add("completed_circle");
+            completeDiv.classList.add("todos_complete_done");
+
+            const checkImage = document.createElement('img');
+
+            checkImage.src = "images/icon-check.svg";
+
+            checkImage.alt = "check icon";
+
+            checkImage.className = "check_icon";
+
+            completeDiv.appendChild(checkImage);
+
 
         }
 
