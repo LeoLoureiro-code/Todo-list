@@ -140,10 +140,6 @@ input{
 }
 
 
-.check_icon{
-    display: none;
-}
-
 .todos_paragraph{
     color: var(--color-text);
     line-height: 1.5rem;
@@ -169,16 +165,18 @@ input{
     cursor: pointer;
 }
 
-
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
 }
 
-
-.check_icon{
-    display: none;
+.todos_complete_done{
+    background: linear-gradient(90deg, var(--color-gradient1) 0%, var(--color-gradient2) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .todos_complete_active{
     border-image: linear-gradient(var(--color-gradient1), var(--color-gradient2));
